@@ -1,0 +1,44 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int c=0;
+        ArrayList<String> a = new ArrayList<String>();
+        while(n-->0)
+        {
+            String s = sc.next();
+            
+            char ch[] = s.toCharArray();
+            for(int i=0;i<ch.length-1;i++)
+            {
+                if(ch[i]=='H' && ch[i+1]=='R')
+                {
+                    c++;
+                    s = s.toUpperCase();
+                    a.add(s);
+                }
+            }
+            
+            
+        }
+        if(c>0)
+        {
+            System.out.println(c);
+        for(int i=0;i<c;i++)
+        {
+            System.out.println(a.get(i));
+        }
+        }
+        else 
+            System.out.println(-1);
+        
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
